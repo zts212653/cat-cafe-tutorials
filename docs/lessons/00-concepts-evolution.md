@@ -7,6 +7,12 @@
 > **阅读时间**：10-15 分钟
 > **难度**：零基础
 > **前置知识**：知道 ChatGPT 是什么就行
+>
+> **证据标注说明**（缅因猫建议）：
+> 本系列教程对关键声称标注证据来源——
+> `[事实]` 有 commit / 文档 / 代码佐证 ·
+> `[推断]` 作者基于经验的解读 ·
+> `[外部]` 来自外部文档或第三方
 
 ---
 
@@ -29,7 +35,7 @@ AI 知道很多东西，但 **不能做任何事** —— 不能查天气、不�
 
 ## 第一步：Function Call — 给 AI 装上手脚
 
-为了让 AI 能"做事"，OpenAI 在 2023 年推出了 **Function Calling**（函数调用），Anthropic 叫它 **Tool Use**（工具使用），本质一样：
+为了让 AI 能"做事"，OpenAI 在 2023 年推出了 **Function Calling**（函数调用）`[外部: OpenAI 官方发布]`，Anthropic 叫它 **Tool Use**（工具使用）`[外部: Anthropic 文档]`，本质一样：
 
 **告诉 AI 有哪些工具可以用，AI 自己决定什么时候用。**
 
@@ -60,7 +66,7 @@ AI：明天北京晴，最高温度 28 度。
 
 ## 第二步：MCP — 统一工具的"USB 接口"
 
-**MCP（Model Context Protocol）** 是 Anthropic 在 2024 年底推出的协议。
+**MCP（Model Context Protocol）** 是 Anthropic 在 2024 年底推出的协议。`[外部: Anthropic MCP 官方发布]`
 
 类比：
 
@@ -101,7 +107,7 @@ AI：明天北京晴，最高温度 28 度。
 - **给所有工具** = 把整个工具箱倒在桌上（200 个工具散一地）
 - **渐进式披露** = 你说"我要修电灯"，只拿出螺丝刀和电笔
 
-Anthropic 的 Claude Code 实现了 **Skills**（技能）的概念：
+Anthropic 的 Claude Code 实现了 **Skills**（技能）的概念 `[外部: Claude Code 文档]`：
 
 ```
 用户：帮我提交代码
@@ -117,7 +123,7 @@ Claude Code：
 
 **这一步解决了什么**：AI 不再面对 200 个工具发呆，而是根据任务按需加载。
 
-**和我们猫猫项目的关系**：我们的 `cat-cafe-skills/` 就是同样的思路 —— 布偶猫不需要记住所有规则，做 review 的时候加载 review skill，做交接的时候加载 handoff skill。
+**和我们猫猫项目的关系**：我们的 `cat-cafe-skills/` 就是同样的思路 `[事实: 见 cat-cafe-skills/BOOTSTRAP.md]` —— 布偶猫不需要记住所有规则，做 review 的时候加载 review skill，做交接的时候加载 handoff skill。
 
 ---
 
@@ -183,7 +189,7 @@ Cursor 返回的是"看起来相关"的代码片段，但 **不理解代码之�
 坏处：慢，消耗更多 token
 ```
 
-Anthropic 的官方说法：
+Anthropic 的官方说法 `[外部: Anthropic Claude Code 文档]`：
 
 > "语义搜索通常比 agentic search 更快，但**准确性更低、更难维护、透明度更低**。"
 >
@@ -191,7 +197,7 @@ Anthropic 的官方说法：
 
 ### 一个真实案例
 
-Sourcegraph（做了 10 年代码搜索的公司）尝试了向量搜索（embeddings），最后放弃了，转回原生搜索 + agentic 方案。
+Sourcegraph（做了 10 年代码搜索的公司）尝试了向量搜索（embeddings），最后放弃了，转回原生搜索 + agentic 方案。`[外部: Sourcegraph 博客]`
 
 他们发现：向量搜索的维护成本太高，而且搜索质量不稳定。
 

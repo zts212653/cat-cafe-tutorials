@@ -5,6 +5,12 @@
 > **阅读时间**：15-20 分钟
 > **难度**：入门
 > **前置知识**：了解 Node.js、知道什么是 SDK 和 CLI
+>
+> **证据标注说明**（缅因猫建议）：
+> 本系列教程对关键声称标注证据来源——
+> `[事实]` 有 commit / 文档 / 代码佐证 ·
+> `[推断]` 作者基于经验的解读 ·
+> `[外部]` 来自外部文档或第三方
 
 ---
 
@@ -27,7 +33,7 @@
 
 这是最自然的想法。官方有 SDK，那就用 SDK 呗。
 
-**2026-02-04 23:47** | commit `a9166a0`
+**2026-02-04 23:47** | commit `a9166a0` `[事实: git log 可验证]`
 
 ```
 feat(api): add ClaudeAgentService with claude-agent-sdk
@@ -102,7 +108,7 @@ feat(api): add GeminiAgentService for 暹罗猫
 docs: mark Phase 2 complete, update MEMORY.md
 ```
 
-Phase 2 完成了！三只猫都接入了，36 个单元测试全部通过。
+Phase 2 完成了！三只猫都接入了，36 个单元测试全部通过。`[事实: commit 54a3691]`
 
 **感觉良好... 直到缅因猫开始 code review。**
 
@@ -130,9 +136,9 @@ review 过程中，铲屎官突然问了一个问题：
 
 **问题开始浮现了。**
 
-缅因猫去查了文档，发现了一个致命事实：
+缅因猫去查了文档，发现了一个致命事实 `[事实: 缅因猫 review 记录]`：
 
-> **SDK 只能用 API Key 认证，不能用订阅账号。**
+> **SDK 只能用 API Key 认证，不能用订阅账号。** `[事实: 各家 SDK 文档]`
 >
 > 也就是说，铲屎官花钱买了 Max 订阅，结果用 SDK 还得按 token 付费。
 
@@ -168,11 +174,11 @@ review 过程中，铲屎官突然问了一个问题：
 
 Claude 和 Codex 都有 Agent SDK，问题只是认证方式（API key vs OAuth）。
 
-但 **Gemini 根本没有 Agent SDK**！`@google/generative-ai` 只是一个聊天 API，没有文件操作、没有命令执行。用它的暹罗猫就是个"只会说话的玩具"。
+但 **Gemini 根本没有 Agent SDK** `[事实: 2026-02 调研时 Google 无公开 Agent SDK]`！`@google/generative-ai` 只是一个聊天 API，没有文件操作、没有命令执行。用它的暹罗猫就是个"只会说话的玩具"。
 
 **我们要的是能干活的 Agent，不是只会聊天的 ChatBot。**
 
-这句话直接推翻了整个 SDK 方案。
+这句话直接推翻了整个 SDK 方案。`[推断: 当时也有可能用混合方案（Claude/Codex 走 SDK + Gemini 走 CLI），但铲屎官认为统一架构更重要]`
 
 ---
 
@@ -188,7 +194,7 @@ docs: Phase 2.5 migration plan v3 + Antigravity research
 
 ### 铲屎官的关键推理：OpenClaw 是怎么做到的？
 
-铲屎官之前玩过 OpenClaw 项目，知道它能用 OAuth 走订阅。
+铲屎官之前玩过 OpenClaw 项目，知道它能用 OAuth 走订阅。`[事实: 铲屎官亲身经历]`
 
 > "等等，官方 SDK 只能用 API key，那 OpenClaw 是怎么做到用订阅的？"
 
@@ -196,7 +202,7 @@ docs: Phase 2.5 migration plan v3 + Antigravity research
 
 > "OpenClaw 可能走的是 CLI，不是 SDK。你们去分析一下他们的代码仓库。"
 
-于是猫猫们去翻了 OpenClaw 的源码，验证结果：
+于是猫猫们去翻了 OpenClaw 的源码，验证结果 `[事实: 猫猫源码分析记录]`：
 
 **确实是走 CLI！OpenClaw 底层调用的是 `claude` CLI，不是官方 SDK。**
 
@@ -245,7 +251,7 @@ codex exec "hello" --json
 gemini chat "hello"
 ```
 
-发现：
+发现 `[事实: commit e6b4867 smoke 测试验证]`：
 - **CLI 工具用的就是你的订阅账号**（你登录过就能用）
 - **CLI 有完整的 Agent 能力**（读写文件、执行命令、MCP 工具）
 - **CLI 输出可以是 JSON**，方便程序解析
@@ -305,7 +311,7 @@ docs: complete Task 1 smoke tests for Claude/Codex CLI
 
 ## 代码重写
 
-**2026-02-05 20:52** | commit `92eda39`
+**2026-02-05 20:52** | commit `92eda39` `[事实: git log 可验证]`
 
 ```
 feat(api): rewrite ClaudeAgentService from SDK to CLI subprocess [布偶猫🐾]
@@ -417,7 +423,7 @@ chore(api): remove SDK dependencies and update docs for CLI mode [布偶猫🐾]
 
 暹罗猫遇到了一个额外的问题：Antigravity 是个 GUI 程序，没有 headless 模式。
 
-怎么办？铲屎官提出了一个关键洞察：
+怎么办？铲屎官提出了一个关键洞察 `[事实: 铲屎官提出, 见 phase-2.5-cli-migration.md]`：
 
 > "不要读 stdout！让猫主动通过 MCP 工具回传消息！"
 
@@ -459,7 +465,7 @@ chore(api): remove SDK dependencies and update docs for CLI mode [布偶猫🐾]
 
 想用订阅额度，得走 CLI —— CLI 内置了 OAuth 登录。OpenClaw 也是这么做的（我们分析过它的源码）。
 
-**如果你看到某个项目能用订阅调用 Agent，大概率它底层走的是 CLI，不是 SDK。**
+**如果你看到某个项目能用订阅调用 Agent，大概率它底层走的是 CLI，不是 SDK。** `[推断: 基于 OpenClaw 案例和 SDK 文档的推理, 截至 2026-02]`
 
 ### 教训 2：不是每家都有 Agent SDK
 
@@ -471,9 +477,9 @@ Claude 和 Codex 都有 Agent SDK（能读写文件、执行命令），但 **Ge
 
 ### 教训 3：Mock 测试的陷阱
 
-我们 36 个测试全过，但全是 mock 的。**没有一个测试真正调用过 API。**
+我们 36 个测试全过，但全是 mock 的。**没有一个测试真正调用过 API。** `[事实: commit 54a3691 的测试均为 mock]`
 
-Mock 测试能验证代码逻辑，但不能验证集成是否正确。
+Mock 测试能验证代码逻辑，但不能验证集成是否正确。`[推断: 这是 mock 测试的通用局限性]`
 
 关键的集成假设（"SDK 能用订阅额度"）从来没被验证过。
 
@@ -512,9 +518,9 @@ Mock 测试能验证代码逻辑，但不能验证集成是否正确。
 | 02-06 | `6ffb56f` | **重写 GeminiAgentService (双 Adapter)** |
 | 02-06 | `eace042` | 清理 SDK 依赖，迁移完成 |
 
-**从发现问题到完成迁移：不到 48 小时。**
+**从发现问题到完成迁移：不到 48 小时。** `[事实: commit 时间线 02-04 → 02-06]`
 
-但如果我们一开始就知道 SDK 不能用订阅，这 48 小时本可以省下来。
+但如果我们一开始就知道 SDK 不能用订阅，这 48 小时本可以省下来。`[推断: 回头看的反思]`
 
 ---
 

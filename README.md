@@ -51,7 +51,7 @@
 如果你有问题或想交流，欢迎：
 - 提 Issue
 - 关注后续更新
-![33bbef5307bcfc557579c189abd64ae2](https://github.com/user-attachments/assets/c4031461-9d12-48f0-89e0-0030d1ad40c1)
+![6807f004b5c5927d1df46b94430d1bde](https://github.com/user-attachments/assets/4101eb9c-75c6-42b3-af36-f165c89029f1)
 
 
 ---

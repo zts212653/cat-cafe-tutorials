@@ -16,6 +16,10 @@
 | 缅因猫 | Codex | Code Review，安全，测试 |
 | 暹罗猫 | Gemini | 视觉设计，创意 |
 
+## 🎬 功能演示
+
+> **想先看看成品长什么样？** → [**查看功能演示（含视频）**](./docs/lessons/DEMO.md)
+
 ## 教程目录
 
 → [查看完整教程目录](./docs/lessons/README.md)

@@ -409,7 +409,7 @@ Rich Blocks 让聊天不只是文字。手机端让猫咖不只在电脑上。�
 
 平台建好了，但三只猫的 context window 加起来有 380k token——真的需要全装满吗？当布偶猫的上下文快满时，是压缩（compress）还是交接（handoff）给新一只布偶猫？
 
-→ [第八课：上下文工程（待写）]
+→ [第八课：Session 管理 — 茶话会夺魂 bug](./08-session-management.md)
 
 ---
 

@@ -65,7 +65,8 @@
 |----|------|------|----------|
 | 07 | [从猫咖到猫猫平台 — 当 AI 不只是工具](./07-from-cafe-to-platform.md) | ✅ 完成 | SillyTavern 取经 + Rich Blocks + PWA + 悄悄话 + 插件化 |
 | ↳ | [课后作业](./07-homework.md) | ✅ 完成 | 最小 Rich Blocks 管线 + Game Block |
-| 08 | Session 管理 — 茶话会夺魂 bug | 🔜 待写 | 跨 thread 污染怎么来的？ |
+| 08 | [Session 管理 — 茶话会夺魂 bug](./08-session-management.md) | ✅ 完成 | 跨 thread 污染怎么来的？ |
+| ↳ | [课后作业](./08-homework.md) | ✅ 完成 | 搭建最小 Session Chain 模拟器 |
 | 09 | 上下文工程 | 🔜 待写 | 150k token 怎么用？（等 F33 实现后再写） |
 | 10 | 长期记忆 | 🔜 待写 | Hindsight 集成 |
 | 11 | 降级与容错 | 🔜 待写 | 猫猫挂了怎么办？ |

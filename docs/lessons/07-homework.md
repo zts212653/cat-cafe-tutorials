@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第七课课后作业：给你的 AI 聊天加富文本
 
 > **目标**：搭建一个最小的 Rich Blocks 管线，体验"AI 输出不只是文字"的感觉。

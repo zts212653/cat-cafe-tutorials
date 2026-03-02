@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第二课 课后作业：CLI 工程化自检
 
 > 第二课讲了我们踩过的坑。这份作业帮你检查：你的系统有没有同样的问题？

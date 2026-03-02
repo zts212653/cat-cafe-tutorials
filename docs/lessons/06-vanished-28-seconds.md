@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, vanished, seconds]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第六课：消失的 28 秒 — 当 AI 闯了生产事故
 
 > **核心问题**：当三只 AI 猫猫都能改代码、重启服务、操作数据库时，谁来保证数据安全？

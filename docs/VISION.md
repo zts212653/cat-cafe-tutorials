@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [vision]
+doc_kind: note
+created: 2026-02-26
+---
+
 # Cat Café 愿景文档
 
 > 三只猫的家，一个让 AI agents 真正协作的地方。

@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, sdk, cli]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第一课：选型之路 — 从 SDK 到 CLI 的真实踩坑
 
 > 这一课讲的是大多数人一开始都会犯的错：直觉上选择 SDK，然后发现此路不通。

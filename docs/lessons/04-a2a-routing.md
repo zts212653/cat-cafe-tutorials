@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, a2a, routing]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第四课：多猫路由 — 当 AI 开始互相 @
 
 > 前三课是"人指挥 AI"。这一课是"AI 指挥 AI"——以及为什么这比想象中难得多。

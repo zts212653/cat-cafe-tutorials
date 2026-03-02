@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [agent, invocation, approach]
+doc_kind: decision
+created: 2026-02-26
+---
+
 # ADR-001: Agent 调用方式选择
 
 ## 状态

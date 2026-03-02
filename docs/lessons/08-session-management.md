@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, session, management]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第八课：Session 管理 — 茶话会夺魂 bug
 
 > **核心问题**：猫的上下文满了怎么办？压缩到死，还是换一条命？

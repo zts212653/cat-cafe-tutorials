@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, concepts, evolution]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第零课：AI Agent 概念演进 — 从"只会聊天"到"能干活的队友"
 
 > 在进入我们的项目故事之前，先花 10 分钟了解这些概念是怎么一步步演化出来的。

@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第八课课后作业：搭建最小 Session Chain
 
 > **目标**：亲手体验 context 满了 → seal → 新 session 按需回忆旧 session 的全过程。

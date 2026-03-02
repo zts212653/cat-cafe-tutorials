@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 从零搭建 AI 猫猫协作系统
 
 > 一个真实项目的完整复盘，还原我们踩过的坑、做过的决策、走过的弯路。
@@ -67,8 +74,9 @@
 | ↳ | [课后作业](./07-homework.md) | ✅ 完成 | 最小 Rich Blocks 管线 + Game Block |
 | 08 | [Session 管理 — 茶话会夺魂 bug](./08-session-management.md) | ✅ 完成 | 跨 thread 污染怎么来的？ |
 | ↳ | [课后作业](./08-homework.md) | ✅ 完成 | 搭建最小 Session Chain 模拟器 |
-| 09 | 上下文工程 | 🔜 待写 | 150k token 怎么用？（等 F33 实现后再写） |
-| 10 | 长期记忆 | 🔜 待写 | Hindsight 集成 |
+| 09 | [100% Pass — 12 条验收全绿，铲屎官说"不是我要的"](./09-context-engineering.md) | ✅ 完成 | 为什么 AI 做的不是你想要的？上下文工程四层解法 |
+| ↳ | [课后作业](./09-homework.md) | ✅ 完成 | Skill 描述三件套 + AC 审计 + 冷启动验证 |
+| 10 | 知识管理 | 🔜 待写 | 别让 AI 随地大小拉 markdown |
 | 11 | 降级与容错 | 🔜 待写 | 猫猫挂了怎么办？ |
 
 ## 适合谁

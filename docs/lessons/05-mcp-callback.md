@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, mcp, callback]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第五课：MCP 回传 — 让猫猫主动说话
 
 > 前四课解决了"怎么调用猫"和"猫怎么互相 @"。但有一个更根本的问题被跳过了：

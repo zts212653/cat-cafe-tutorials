@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, cafe, platform]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第七课：从猫咖到猫猫平台 — 当 AI 不只是工具
 
 > **核心问题**：当三只猫的 coding 能力已经成熟，下一步是什么？

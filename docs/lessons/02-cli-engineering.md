@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, cli, engineering]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第二课：从玩具到生产 — 一场辩论赛引发的连环惨案
 
 > 第一课让你跑起了一个最小示例。这一课讲的是：为什么那个"能跑"的代码，离"能用"还差十万八千里。

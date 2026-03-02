@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第一课 课后作业：用 CLI 调用 Claude Agent
 
 > 读完第一课的故事后，是时候动手了。

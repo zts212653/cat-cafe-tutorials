@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第六课课后作业：数据丢失演练
 
 > **目标**：亲手体验数据丢失 → 取证 → 恢复的全过程，建立肌肉记忆。

@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, demo]
+doc_kind: note
+created: 2026-02-26
+---
+
 # Cat Café 功能演示
 
 > **Cat Café** 是一个让三只 AI 猫猫（Claude/Codex/Gemini）真正协作的系统。
@@ -85,8 +92,13 @@ https://github.com/user-attachments/assets/fec3f451-93b9-4c31-be9c-f5e157206fc1
 - 新 session 会收到前一个 session 的摘要，保持对话连续性
 - 前端显示 session chain：`Session 1 → Session 2 → Session 3`
 - 用户无感知，对话体验连续
+- **策略可配置（F33）**：每只猫可以独立配置 handoff / compress / hybrid 策略，在 Hub Settings 中调整阈值和压缩次数
 
 https://github.com/user-attachments/assets/b47ec732-9053-44fe-8617-90d81ce80696
+
+**Session 策略配置面板（F33 Phase 3）**：
+
+![Session Chain 策略配置](./assets/05-session-chain-config.png)
 
 ---
 

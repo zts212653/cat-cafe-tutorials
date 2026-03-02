@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, meta, rules]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第三课：驯化 AI 的元规则 — 为什么 WHY 比 WHAT 重要
 
 > 前两课教你怎么让 AI 跑起来。这一课教你怎么让 AI **专业地**工作。

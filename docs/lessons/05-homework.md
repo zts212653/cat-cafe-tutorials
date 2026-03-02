@@ -1,3 +1,10 @@
+---
+feature_ids: []
+topics: [lessons, homework]
+doc_kind: note
+created: 2026-02-26
+---
+
 # 第五课 课后作业：给猫装上嘴巴
 
 > 读完第五课的故事后，是时候动手了。

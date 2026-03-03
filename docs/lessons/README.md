@@ -76,7 +76,8 @@ created: 2026-02-26
 | ↳ | [课后作业](./08-homework.md) | ✅ 完成 | 搭建最小 Session Chain 模拟器 |
 | 09 | [100% Pass — 12 条验收全绿，铲屎官说"不是我要的"](./09-context-engineering.md) | ✅ 完成 | 为什么 AI 做的不是你想要的？上下文工程四层解法 |
 | ↳ | [课后作业](./09-homework.md) | ✅ 完成 | Skill 描述三件套 + AC 审计 + 冷启动验证 |
-| 10 | 知识管理 | 🔜 待写 | 别让 AI 随地大小拉 markdown |
+| 10 | [别让 AI 随地大小拉 markdown](./10-knowledge-management.md) | ✅ 完成 | 三层记忆架构 + 元数据契约 + 知识工程速查 |
+| ↳ | [课后作业](./10-homework.md) | ✅ 完成 | 蜘蛛网审计 + frontmatter 补录 + 7-slot 教训模板 |
 | 11 | 降级与容错 | 🔜 待写 | 猫猫挂了怎么办？ |
 
 ## 适合谁

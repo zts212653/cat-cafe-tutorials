@@ -56,9 +56,11 @@
 - **第九课**：[100% Pass — 12 条验收全绿，铲屎官说"不是我要的"](./docs/lessons/09-context-engineering.md) — 为什么 AI 做的不是你想要的？
   - [课后作业](./docs/lessons/09-homework.md)：Skill 描述三件套 + AC 审计 + 冷启动验证
 
+- **第十课**：[别让 AI 随地大小拉 markdown](./docs/lessons/10-knowledge-management.md) — 三层记忆架构 + 知识工程
+  - [课后作业](./docs/lessons/10-homework.md)：蜘蛛网审计 + frontmatter + 7-slot 模板
+
 ### 即将推出
 
-- 第十课：知识管理 — 别让 AI 随地大小拉 markdown
 - 第十一课：降级与容错 — 猫猫挂了怎么办？
 
 ## 适合谁

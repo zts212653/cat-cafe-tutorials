@@ -98,7 +98,7 @@ https://github.com/user-attachments/assets/b47ec732-9053-44fe-8617-90d81ce80696
 
 **Session 策略配置面板（F33 Phase 3）**：
 
-![Session Chain 策略配置](./assets/05-session-chain-config.png)
+![Session Chain 策略配置](assets/demo/05-session-chain-config.png)
 
 ---
 

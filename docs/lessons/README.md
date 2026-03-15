@@ -78,7 +78,9 @@ created: 2026-02-26
 | ↳ | [课后作业](./09-homework.md) | ✅ 完成 | Skill 描述三件套 + AC 审计 + 冷启动验证 |
 | 10 | [别让 AI 随地大小拉 markdown](./10-knowledge-management.md) | ✅ 完成 | 三层记忆架构 + 元数据契约 + 知识工程速查 |
 | ↳ | [课后作业](./10-homework.md) | ✅ 完成 | 蜘蛛网审计 + frontmatter 补录 + 7-slot 教训模板 |
-| 11 | 降级与容错 | 🔜 待写 | 猫猫挂了怎么办？ |
+| 11 | [让猫猫开口说话 — 从"五年前机器朗读"到 11 只猫 11 种声线](./11-voice-pipeline.md) | ✅ 完成 | ASR + TTS + Voice Identity + iOS autoplay 全链路 |
+| ↳ | [课后作业](./11-homework.md) | ✅ 完成 | TTS 对比 + 克隆实验 + Autoplay 策略 + Adapter 模式 |
+| 12 | 降级与容错 | 🔜 待写 | 猫猫挂了怎么办？ |
 
 ## 适合谁
 

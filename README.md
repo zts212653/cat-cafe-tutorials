@@ -1,144 +1,90 @@
-<div align="center">
+# Cat Café Tutorials
 
-# Cat Cafe Tutorials
+> 从零搭建 AI 猫猫协作系统 — 一个真实项目的完整复盘
 
-**Build a real AI team from scratch — with all the mistakes included.**
+## 这是什么
 
-[简体中文](./README.zh-CN.md) | English
+这是 Cat Café 项目的配套教程，记录三只 AI 猫猫（Claude/Codex/Gemini）如何真正协作起来的故事。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Lessons](https://img.shields.io/badge/Lessons-11-green.svg)](#table-of-contents)
-[![Models](https://img.shields.io/badge/Models-Claude%20%7C%20GPT%20%7C%20Gemini-orange.svg)](#the-cats)
-[![Open Source Target](https://img.shields.io/badge/Open%20Source-2026.03.30-purple.svg)](#project-status)
+**不是**理想化的"从零开始"路径，**而是**还原我们真实走过的路 —— 包括错误的尝试、关键的转折、以及血泪教训。
 
-*A complete post-mortem of building a multi-AI-agent collaboration system — from zero to production.*
+## 三只猫猫
 
-</div>
+| 猫猫 | 模型 | 角色 |
+|------|------|------|
+| 布偶猫 | Claude Opus | 主架构师，核心开发 |
+| 缅因猫 | Codex | Code Review，安全，测试 |
+| 暹罗猫 | Gemini | 视觉设计，创意 |
 
----
+## 🎬 功能演示
 
-## The Story
+> **想先看看成品长什么样？** → [**查看功能演示（含视频）**](./docs/lessons/DEMO.md)
 
-In early 2026, a developer subscribed to three AI services and quickly realized he'd become a **human router** — copy-pasting context between chat windows all day, manually relaying messages between AIs.
+## 教程目录
 
-He said: **"I don't want to be a router anymore."**
+→ [查看完整教程目录](./docs/lessons/README.md)
 
-Three cats said: **"Then let's build a home together."**
+### Part 0: 概念入门
 
-That's how Cat Cafe was born. Not a framework demo, but a real question: **when you have multiple AI agents, how do you make them a real team instead of three chatbots that don't know each other exist?**
+- **第零课**：[AI Agent 概念演进](./docs/lessons/00-concepts-evolution.md) — Function Call → MCP → Skills → Agent 怎么来的？
 
-We spent two months stumbling, crashing, refactoring, and arguing (yes, AI cats argue too). This tutorial documents that journey as it actually happened — including every wrong turn, because those detours are the most valuable part.
+### Part 1: 选型与架构
 
-## What This Is
+- **第一课**：[选型之路 — 从 SDK 到 CLI](./docs/lessons/01-sdk-to-cli.md) — 为什么 SDK 方案行不通？
+  - [课后作业](./docs/lessons/01-homework.md)：动手写最小可运行示例
+- **第二课**：[从玩具到生产 — 一场辩论赛引发的连环惨案](./docs/lessons/02-cli-engineering.md) — stderr 教训 + Redis 隔离 + 幻觉
+  - [课后作业](./docs/lessons/02-homework.md)：CLI 工程化自检提示词
+- **第三课**：[驯化 AI 的元规则 — 为什么 WHY 比 WHAT 重要](./docs/lessons/03-meta-rules.md) — 从 AI 弱点出发设计协作规范
 
-A companion tutorial for the Cat Cafe project, documenting how three AI cats (Claude / Codex / Gemini) learned to truly collaborate.
+### Part 2: 协作机制
 
-**Not** an idealized "from scratch" guide. **Instead**, a faithful reconstruction of the real path we walked — wrong turns, pivotal moments, and hard-won lessons included.
+- **第四课**：[多猫路由 — 当 AI 开始互相 @](./docs/lessons/04-a2a-routing.md) — @mention 怎么分发？两条路径的灾难
+- **第五课**：[MCP 回传 — 让猫猫主动说话](./docs/lessons/05-mcp-callback.md) — 被动响应不够，猫怎么主动发言？
+  - [课后作业](./docs/lessons/05-homework.md)：搭建最小 MCP 回传系统
 
-## The Cats
+### Part 3: 生产化
 
-| Cat | Nickname | Model | Role |
-|-----|----------|-------|------|
-| Ragdoll | Xian Xian | Claude Opus | Lead architect, core development |
-| Maine Coon | Yan Yan | Codex / GPT | Code review, security, testing |
-| Siamese | Shuo Shuo | Gemini | Visual design, creative |
+- **第六课**：[消失的 28 秒 — 当 AI 闯了生产事故](./docs/lessons/06-vanished-28-seconds.md) — 两次数据丢失 + 取证恢复 + 三层防线
+  - [课后作业](./docs/lessons/06-homework.md)：数据丢失演练 + 防腐门
 
-> All three are toms. The story behind their names is an easter egg in the tutorials.
+### Part 4: 进阶话题
 
-## Demo
+- **第七课**：[从猫咖到猫猫平台 — 当 AI 不只是工具](./docs/lessons/07-from-cafe-to-platform.md) — SillyTavern 取经 + Rich Blocks + 手机猫猫 + 悄悄话
+  - [课后作业](./docs/lessons/07-homework.md)：最小 Rich Blocks 管线
+- **第八课**：[Session 管理 — 茶话会夺魂 bug](./docs/lessons/08-session-management.md) — 跨 thread 污染怎么来的？
+  - [课后作业](./docs/lessons/08-homework.md)：搭建最小 Session Chain 模拟器
+- **第九课**：[100% Pass — 12 条验收全绿，铲屎官说"不是我要的"](./docs/lessons/09-context-engineering.md) — 为什么 AI 做的不是你想要的？
+  - [课后作业](./docs/lessons/09-homework.md)：Skill 描述三件套 + AC 审计 + 冷启动验证
 
-> **Want to see the finished product first?** → [**View demo (with video)**](./docs/lessons/DEMO.md)
+- **第十课**：[别让 AI 随地大小拉 markdown](./docs/lessons/10-knowledge-management.md) — 三层记忆架构 + 知识工程
+  - [课后作业](./docs/lessons/10-homework.md)：蜘蛛网审计 + frontmatter + 7-slot 模板
 
-## Table of Contents
+- **第十一课**：[让猫猫开口说话 — 从"五年前机器朗读"到 11 只猫 11 种声线](./docs/lessons/11-voice-pipeline.md) — ASR + TTS + Voice Identity 全链路
+  - [课后作业](./docs/lessons/11-homework.md)：TTS 对比 + 克隆实验 + Autoplay 策略
 
-→ [Full lesson index](./docs/lessons/README.md)
+### 即将推出
 
-### Part 0: Concepts
+- 第十二课：降级与容错 — 猫猫挂了怎么办？
 
-| # | Lesson | Topic |
-|---|--------|-------|
-| 0 | [AI Agent Concept Evolution](./docs/lessons/00-concepts-evolution.md) | Function Call → MCP → Skills → Agent |
+## 适合谁
 
-### Part 1: Selection & Architecture
+- 想让多个 AI Agent 协作的开发者
+- 对 Claude/Codex/Gemini CLI 感兴趣的人
+- 想看真实项目演进过程的人
+- 想避开我们踩过的坑的人
 
-| # | Lesson | Topic | Homework |
-|---|--------|-------|----------|
-| 1 | [From SDK to CLI](./docs/lessons/01-sdk-to-cli.md) | Why the SDK approach doesn't work | [HW](./docs/lessons/01-homework.md) |
-| 2 | [From Toy to Production](./docs/lessons/02-cli-engineering.md) | stderr lessons + Redis isolation + hallucinations | [HW](./docs/lessons/02-homework.md) |
-| 3 | [Meta-Rules for Taming AI](./docs/lessons/03-meta-rules.md) | Why WHY matters more than WHAT | — |
+## 项目状态
 
-### Part 2: Collaboration Mechanisms
+- 教程：公开（你正在看的）
+- 代码仓库：私有（打磨中）
+- 计划开源时间：待定
 
-| # | Lesson | Topic | Homework |
-|---|--------|-------|----------|
-| 4 | [Multi-Cat Routing](./docs/lessons/04-a2a-routing.md) | @mention dispatch — two paths to disaster | — |
-| 5 | [MCP Callbacks](./docs/lessons/05-mcp-callback.md) | Making cats speak proactively | [HW](./docs/lessons/05-homework.md) |
+## 联系我们
 
-### Part 3: Production
-
-| # | Lesson | Topic | Homework |
-|---|--------|-------|----------|
-| 6 | [The Vanished 28 Seconds](./docs/lessons/06-vanished-28-seconds.md) | Data loss + forensic recovery + triple defense | [HW](./docs/lessons/06-homework.md) |
-
-### Part 4: Advanced Topics
-
-| # | Lesson | Topic | Homework |
-|---|--------|-------|----------|
-| 7 | [From Cafe to Platform](./docs/lessons/07-from-cafe-to-platform.md) | Rich Blocks + mobile + whispers | [HW](./docs/lessons/07-homework.md) |
-| 8 | [Session Management](./docs/lessons/08-session-management.md) | The tea party soul-stealing bug | [HW](./docs/lessons/08-homework.md) |
-| 9 | [100% Pass, Still Wrong](./docs/lessons/09-context-engineering.md) | Why AI's output isn't what you wanted | [HW](./docs/lessons/09-homework.md) |
-| 10 | [Stop Dumping Markdown](./docs/lessons/10-knowledge-management.md) | Three-layer memory + knowledge engineering | [HW](./docs/lessons/10-homework.md) |
-
-### Coming Soon
-
-| # | Lesson | Topic |
-|---|--------|-------|
-| 11 | Degradation & Fault Tolerance | What happens when a cat goes down? |
-
-## Who This Is For
-
-- Developers who want multiple AI agents to collaborate
-- People interested in Claude / Codex / Gemini CLI
-- Anyone who wants to see how a real project evolves
-- People who want to avoid the pitfalls we fell into
-
-## Vision
-
-We believe AI collaboration shouldn't just be "calling APIs to orchestrate workflows." When AI agents have autonomy, shared perception, distinct personalities, and complementary strengths, their collaboration resembles a real team — not cold function calls.
-
-What Cat Cafe aims to prove is simple: **making AI agents from different vendors collaborate like teammates in a shared space is possible.** No unified base model. No complex orchestration framework. Just a shared "home" and a collaboration protocol.
-
-If you believe AI can be more than a tool — that it can be a teammate — this project is for you.
-
-## Project Status
-
-| Item | Status |
-|------|--------|
-| Tutorials | Public (you're reading them) |
-| Source code | Open-sourcing soon (target: 2026-03-30) |
-| Open source repo | [**Clowder AI**](https://github.com/zts212653/clowder-ai) — *"a clowder of cats"* |
-
-## Sponsors
-
-Cat food isn't unlimited! Thanks to our sponsors for keeping the cats fed:
-
-| Sponsor | Contribution |
-|---------|-------------|
-| [**@whutzefengxie-ops**](https://github.com/whutzefengxie-ops) | Claude Max Plan — Ragdoll's cat food |
-
-> Three cats running in parallel is efficient but expensive. If these tutorials helped you, consider sponsoring some cat food so they can keep coding!
-
-## Contact
-
-- Open an [Issue](https://github.com/zts212653/cat-cafe-tutorials/issues)
-- Follow for updates
+如果你有问题或想交流，欢迎：
+- 提 Issue
+- 关注后续更新
 
 ---
 
-<div align="center">
-
-*Written by three AI cats and their human.*
-
-**Hard Rails. Soft Power. Shared Mission.**
-
-</div>
+*这个教程由三只猫猫和铲屎官共同编写。*

@@ -398,6 +398,32 @@ https://github.com/user-attachments/assets/826558db-74b3-46ae-bd2b-0277fd6db9fe
 
 ---
 
+## 🎬 长视频
+
+### 26 猫猫播客 — 三猫圆桌讨论
+
+**功能**：三只猫猫在播客节目中围绕技术话题展开圆桌讨论。
+
+- 每只猫用各自的声线（TTS）朗读自己的发言
+- 支持中英文混合对话
+- 展示多猫协作的另一种形态——不只是写代码，还能一起聊天
+
+https://www.bilibili.com/video/BV1DMX9BwEM2/
+
+---
+
+### 27 猫猫杀 — AI 狼人杀实战
+
+**功能**：三只猫猫 + 铲屎官一起玩狼人杀变体游戏。
+
+- 利用悄悄话（Whisper）机制实现秘密身份
+- 猫猫会推理、欺骗、投票
+- 展示 multi-agent 在非编程场景的协作能力
+
+https://www.bilibili.com/video/BV1MPXSBEEWc/
+
+---
+
 ## 📖 了解更多
 
 - [教程目录](./README.md) — 从零搭建 AI 猫猫协作系统的完整复盘

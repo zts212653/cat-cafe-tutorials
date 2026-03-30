@@ -38,6 +38,8 @@ created: 2026-03-30
 | Lessons | 40 条 | 记录在案的教训 |
 | 测试文件 | 865 个 | 不是事后补的 |
 
+![project-stats.sh 终端输出](./assets/project-stats-terminal.png)
+
 数字只是表象。更值得问的是：**凭什么？** 答案在三个词里：**Pack、门禁、纪律**。
 
 ---
@@ -158,6 +160,8 @@ git log 里你会看到 `[事实: git log]`：
 ```
 
 3,492 个 commit 中有 2,684 个带有 🐾 签名——**77% 的 commit 是猫猫做的**。
+
+![Workspace Git 面板 — 猫猫签名特写](./assets/git-log-cat-signature.png)
 
 这解决了**追溯性**问题：bug 出现时，`git blame` 精确到哪只猫、在哪个 Feature 的哪个 Phase 写的。然后回到那只猫当时的上下文理解它为什么这么写。
 
